@@ -1,0 +1,216 @@
+
+    /* General Reset and Styling */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        /* overflow-x: hidden; */
+        background-color: #f7cac;
+    }
+
+    /* Header Styling */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: #92a8d1;
+        color: white;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        /* box-shadow: 0px 2px 2px 2px rgb(181, 179, 179); */
+        box-shadow: 0px 2px 3px 4px #a6bfee;
+    }
+
+    .logo {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .nav {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 15px;
+        
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: white;
+        padding: 5px 10px;
+        
+    }
+
+    .nav-links a:hover {
+        background-color: #555;
+        border-radius: 5px;
+    }
+
+    .hamburger {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    .hamburger div {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 4px 0;
+    }
+
+    /* Responsive Adjustments for Header */
+    @media (max-width: 768px) {
+        .hamburger {
+            display: flex;
+        }
+
+        .nav-links {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 70px;
+            right: 20px;
+            background-color: #333;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .nav-links.active {
+            display: flex;
+        }
+    }
+
+    /* Main Section Styling */
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 20px;
+        min-height: 100vh;
+    }
+
+    main .text-section {
+        max-width: 90%;
+        text-align: center;
+    }
+
+    main img {
+        max-width: 90%;
+        margin: 20px 0;
+        border-radius: 10px;
+    }
+
+    @media (min-width: 768px) {
+        main {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        main .text-section {
+            max-width: 50%;
+            text-align: left;
+        }
+
+        main img {
+            max-width: 45%;
+        }
+    }
+
+    /* Card Section Styling */
+    .card-sec, .card-third, .card-forth, .card-fifth {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: 20px 0;
+        gap: 15px;
+    }
+
+    .card-sec img, .card-third img, .card-forth img, .card-fifth img {
+        width: 200px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 10px;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card-sec img:hover, .card-third img:hover, .card-forth img:hover, .card-fifth img:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .card-sec h1, .card-third h1, .card-forth h1, .card-fifth h1 {
+        text-align: center;
+        font-size: 1.2em;
+    }
+
+    .card-sec p, .card-third p, .card-forth p, .card-fifth p {
+        text-align: center;
+    }
+
+    /* Letter Section */
+    .letter {
+        display: none;
+        padding: 20px;
+        background-color: #f4f4f4;
+        text-align: center;
+    }
+
+    .letter input {
+        display: block;
+        margin: 10px auto;
+        padding: 10px;
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .letter button {
+        padding: 10px 20px;
+        background-color: #333;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    /* Footer Section */
+    .footer {
+        display: none;
+        padding: 20px;
+        background-color: #333;
+        color: white;
+        text-align: center;
+    }
+
+    .footer nav {
+        margin: 10px 0;
+    }
+
+    .footer nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+    }
+
+    .footer nav a:hover {
+        text-decoration: underline;
+    }
+
+
+
+    html {
+        scroll-behavior: smooth;
+    }
+    
